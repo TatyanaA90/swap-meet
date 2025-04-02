@@ -1,7 +1,8 @@
-import uuid
-class Clothing:
-    def __init__(self, id=None, fabric="Unknown"):
-        self.id = uuid.uuid1().int if id is None else id
+from swap_meet.item import Item
+
+class Clothing(Item):
+    def __init__(self, id=None, fabric="Unknown", condition=0):
+        super().__init__(id=id, condition=condition)
         self.fabric = fabric
     
     def get_category(self):
