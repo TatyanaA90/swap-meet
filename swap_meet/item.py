@@ -21,3 +21,4 @@ class Item:
         }
 
         return descriptions.get(self.condition, "Unknown condition")
+    
