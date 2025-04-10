@@ -132,6 +132,10 @@ def test_swap_items_from_their_empty_returns_false():
     result = fatimah.swap_items(jolie, item_b, nobodys_item)
 
     assert result == False
+    assert item_a in fatimah.inventory
+    assert item_b in fatimah.inventory
+    assert item_c in fatimah.inventory
+    assert len(jolie.inventory) == 0
 
     #raise Exception("Complete this test according to comments below.")
     # *********************************************************************

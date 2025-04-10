@@ -49,6 +49,10 @@ def test_removing_not_found_is_false():
 
     result = vendor.remove(item)
     assert result == False
+    assert "a" in vendor.inventory
+    assert "b" in vendor.inventory
+    assert "c" in vendor.inventory
+    assert item not in vendor.inventory
     #raise Exception("Complete this test according to comments below.")
     # *********************************************************************
     # ****** Complete Assert Portion of this test **********
