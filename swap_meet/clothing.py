@@ -6,4 +6,6 @@ class Clothing(Item):
         self.fabric = fabric
     
     def __str__(self): 
-        return f"An object of type Clothing with id {self.id}. It is made from {self.fabric} fabric."
+        item_message = super().__str__()
+        clothing_message = f"It is made from {self.fabric} fabric."
+        return " ".join((item_message,clothing_message))
